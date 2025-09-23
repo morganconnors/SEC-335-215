@@ -9,11 +9,15 @@ echo "port - $port"
 
 echo "host,port,state,service"
 
-for i in {1..254}; do
-    ip="10.0.5.$i"
 
-    echo -n "$ip "
-    nmap -p $port $ip | grep 53
-    echo
-    
-done
+nmap -oG - -p "$port" "$prefix".0/24 2>/dev/null | awk -v port="$port" '
+/open/ {
+    split($2, ip_parts, "/")
+    ip = ip_parts[1]
+    n = split($0, fields, " ")
+    for(i=1; i<=n; i++) {
+        if(fields[i] ~ port"/open") {
+            print ip ":" port
+        }
+    }
+}'
