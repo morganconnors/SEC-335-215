@@ -12,7 +12,8 @@ echo "host,port,state,service"
 for i in {1..254}; do
     ip="10.0.5.$i"
 
-    echo "$ip"
+    echo -n "$ip"
     nmap -p $port $ip | grep 53
+    echo
     
 done
