@@ -7,8 +7,7 @@ echo "inputs"
 echo "prefix - $prefix"
 echo "port - $port"
 
-echo "host,port,state,service"
-
+echo ""
 
 nmap -oG - -p "$port" "$prefix".0/24 2>/dev/null | awk -v port="$port" '
 /open/ {
