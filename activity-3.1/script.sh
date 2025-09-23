@@ -1,7 +1,7 @@
 #!bin/bash
 
-prefix = $1
-port = $2
+prefix=$1
+port=$2
 
 echo "inputs"
 echo "prefix - $prefix"
