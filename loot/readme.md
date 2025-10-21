@@ -1,0 +1,13 @@
+| Username | Password | Service |
+| --- | --- | --- | 
+| gandalf.grey | gandalfrockyou | ssh |
+| galadriel | galadrielarwen111 | ssh |
+| boromir | BoRomir2000Z | ssh | 
+| bilbo | Rivendell107 | http | 
+| bilbo.baggins | Frodo2013 | ssh | 
+| frodo | 1Brandywine | http | 
+| frodo.baggins | Strider2020 | ssh | 
+| pippin | adminPippin | http | 
+| peregrin.took | 28Peregrin | ssh | 
+| samwise | RosieRosie | http | 
+| samwise.gamgee | Mallorn79 | ssh | 
