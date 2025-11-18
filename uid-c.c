@@ -3,13 +3,13 @@
 #include <stdio.h>
 #include <unistd.h>
 
-int main(int argc, char *archv[])
+int main(int argc, char *argv[])
 {
-  struct passwd* pw;
+  struct passwd *pw;
   uid_t uid;
 
   uid = geteuid ();
-  pw = getpwduid (uid);
+  pw = getpwuid (uid);
   if (pw)
   {
     puts(pw->pw_name);
